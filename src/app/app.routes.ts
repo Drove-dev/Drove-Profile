@@ -5,4 +5,8 @@ export const routes: Routes = [
     path: '',
     loadChildren: () => import('./features/home/home.routes').then(m => m.HOME_ROUTES),
   },
+  {
+    path: '**',
+    loadComponent: () => import('./features/not-found/not-found.component').then(m => m.NotFoundComponent),
+  },
 ];
