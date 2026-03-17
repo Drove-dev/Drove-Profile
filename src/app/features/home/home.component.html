@@ -1,0 +1,133 @@
+<div class="selection:bg-primary/30 selection:text-white bg-background text-textMain font-sans min-h-screen">
+  <!-- Fixed subtle glows and grid -->
+  <div class="fixed inset-0 bg-radial-glow z-0 pointer-events-none"></div>
+  <div class="fixed inset-0 bg-grid z-0 pointer-events-none opacity-50"></div>
+  <app-waves></app-waves>
+
+  <header
+  class="fixed top-0 w-full z-50 transition-all duration-300"
+  [class.header-blur]="isScrolled()"
+  *transloco="let t"
+>
+  <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+    <!-- Logo -->
+    <div class="flex items-center gap-2 group cursor-pointer">
+      <img src="assets/images/logo.svg" alt="Drove Logo" class="w-8 h-8 object-contain group-hover:scale-110 transition-transform">
+      <span class="text-xl font-bold tracking-widest text-textMain">DROVE</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="hidden md:flex items-center gap-8">
+      <a href="#about" class="text-sm font-medium text-textMuted hover:text-textMain transition-colors">
+        {{ t('HEADER.NAV.ABOUT') }}
+      </a>
+      <a href="#projects" class="text-sm font-medium text-textMuted hover:text-textMain transition-colors">
+        {{ t('HEADER.NAV.ARCHITECTURE') }}
+      </a>
+      <a href="#experience" class="text-sm font-medium text-textMuted hover:text-textMain transition-colors">
+        {{ t('HEADER.NAV.EXPERIENCE') }}
+      </a>
+      <a href="#metrics" class="text-sm font-medium text-textMuted hover:text-textMain transition-colors">
+        {{ t('HEADER.NAV.IMPACT') }}
+      </a>
+      <a href="#tech-stack" class="text-sm font-medium text-textMuted hover:text-textMain transition-colors">
+        {{ t('HEADER.NAV.TECH_STACK') }}
+      </a>
+      <!-- <a href="#contact" class="text-sm font-medium text-textMuted hover:text-textMain transition-colors">
+        {{ t('HEADER.NAV.CONTACT') || 'Contact' }}
+      </a> -->
+    </nav>
+
+    <!-- Right Actions -->
+    <div class="flex items-center gap-6">
+      <!-- Language -->
+      <button
+        (click)="toggleLanguage()"
+        class="text-xs font-mono px-2 py-1 border border-primary/20 bg-primary/5 text-primary rounded hover:bg-primary/10 transition-colors uppercase"
+      >
+        {{ t('HEADER.LANG_BUTTON') }}
+      </button>
+
+      <!-- Socials -->
+      <div class="flex items-center gap-4 text-textMuted">
+        <a href="https://www.linkedin.com/in/eimar-romero/" target="_blank" [title]="t('HEADER.SOCIALS.LINKEDIN')" class="hover:text-textMain transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="https://github.com/Drove-dev" target="_blank" [title]="t('HEADER.SOCIALS.GITHUB')" class="hover:text-textMain transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+        </a>
+        <a href="mailto:hello@drove.dev" [title]="t('HEADER.SOCIALS.EMAIL')" class="hover:text-textMain transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+  <!-- Main Content -->
+  <main class="max-w-5xl mx-auto px-6 pt-40 pb-32 space-y-40 relative z-10">
+    <app-hero class="reveal block"></app-hero>
+    <app-projects class="reveal block"></app-projects>
+    <app-experience class="reveal block"></app-experience>
+    <app-metrics class="reveal block"></app-metrics>
+    <app-tech-stack class="reveal block"></app-tech-stack>
+    <!-- <app-contact class="reveal block"></app-contact> -->
+  </main>
+
+  <footer class="border-t border-borderSubtle bg-surface/30 pt-20 pb-10 relative z-10" *transloco="let t">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+        <!-- Brand & Tagline -->
+        <div class="md:col-span-5 space-y-6">
+          <div class="flex items-center gap-2 group cursor-pointer w-fit">
+            <img src="assets/images/logo.svg" alt="Drove Logo" class="w-6 h-6 object-contain group-hover:rotate-12 transition-transform duration-300">
+            <span class="text-lg font-bold tracking-widest text-textMain">DROVE</span>
+          </div>
+          <p class="text-textMuted text-sm leading-relaxed max-w-xs font-light">
+            {{ t('FOOTER.TAGLINE') }}
+          </p>
+        </div>
+
+        <!-- Links -->
+        <div class="md:col-span-3 space-y-6">
+          <h4 class="text-xs font-mono text-primary uppercase tracking-widest">{{ t('FOOTER.LINKS.TITLE') }}</h4>
+          <ul class="space-y-3">
+            <li><a href="#about" class="text-sm text-textMuted hover:text-textMain transition-colors">{{ t('FOOTER.LINKS.ABOUT') }}</a></li>
+            <li><a href="#projects" class="text-sm text-textMuted hover:text-textMain transition-colors">{{ t('FOOTER.LINKS.ARCHITECTURE') }}</a></li>
+            <li><a href="#experience" class="text-sm text-textMuted hover:text-textMain transition-colors">{{ t('FOOTER.LINKS.EXPERIENCE') }}</a></li>
+            <li><a href="#metrics" class="text-sm text-textMuted hover:text-textMain transition-colors">{{ t('FOOTER.LINKS.IMPACT') }}</a></li>
+            <li><a href="#tech-stack" class="text-sm text-textMuted hover:text-textMain transition-colors">{{ t('FOOTER.LINKS.TECH_STACK') }}</a></li>
+            <!-- <li><a href="#contact" class="text-sm text-textMuted hover:text-textMain transition-colors">{{ t('FOOTER.LINKS.CONTACT') || 'Contact' }}</a></li> -->
+          </ul>
+        </div>
+
+        <!-- Social -->
+        <div class="md:col-span-4 space-y-6">
+          <h4 class="text-xs font-mono text-primary uppercase tracking-widest">{{ t('FOOTER.SOCIAL.TITLE') }}</h4>
+          <div class="flex items-center gap-5 text-textMuted">
+            <a href="https://www.linkedin.com/in/eimar-romero/" target="_blank" class="p-2.5 rounded-lg bg-white/5 border border-white/5 hover:border-primary/30 hover:text-primary transition-all">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://github.com/Drove-dev" target="_blank" class="p-2.5 rounded-lg bg-white/5 border border-white/5 hover:border-primary/30 hover:text-primary transition-all">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            </a>
+            <a href="mailto:hello@drove.dev" class="p-2.5 rounded-lg bg-white/5 border border-white/5 hover:border-primary/30 hover:text-primary transition-all">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6 text-[11px] font-mono uppercase tracking-widest">
+        <div class="text-textMuted">
+          {{ t('FOOTER.COPYRIGHT') }}
+        </div>
+        <div class="flex items-center gap-2 text-textMuted group">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span class="group-hover:text-primary transition-colors">{{ t('FOOTER.MADE_WITH') }}</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>

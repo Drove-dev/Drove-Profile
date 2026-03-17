@@ -1,0 +1,49 @@
+<section id="tech-stack" class="relative py-32 overflow-hidden" *transloco="let t">
+  <!-- Subtle Background Glows -->
+  <div class="absolute top-1/4 -left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-[120px] pointer-events-none"></div>
+  <div class="absolute bottom-1/4 -right-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+  <div class="container mx-auto px-6 relative z-10">
+    <!-- Header -->
+    <div class="mb-20 tech-reveal-header">
+      <div class="flex items-center gap-4 mb-4">
+        <div class="h-[1px] w-12 bg-primary/30"></div>
+        <span class="text-[10px] font-mono uppercase tracking-[0.4em] text-primary/80 font-semibold italic">{{ t('TECH_STACK.LABEL') || 'System Core' }}</span>
+      </div>
+      <h2 class="text-5xl md:text-6xl font-bold text-textMain tracking-tight mb-6">
+        {{ t('TECH_STACK.TITLE_PART1') || 'Technical' }} <span class="bg-gradient-to-r from-primary to-primary/40 bg-clip-text text-transparent italic font-serif">{{ t('TECH_STACK.TITLE_PART2') || 'Arsenal' }}</span>
+      </h2>
+      <p class="text-textMuted max-w-2xl text-base leading-relaxed font-light border-l-2 border-borderSubtle pl-8">
+        {{ t('TECH_STACK.DESCRIPTION') || 'A curated selection of industrial-grade technologies powering high-performance, distributed architectures.' }}
+      </p>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-20">
+      <div *ngFor="let cat of categories; let i = index"
+           class="space-y-10 tech-reveal-category"
+           [style.transition-delay]="i * 100 + 'ms'">
+
+        <div class="relative">
+          <h3 class="text-[12px] font-mono uppercase tracking-[0.3em] font-black text-textMain/90 flex items-center gap-4">
+            <span class="w-2 h-2 rounded-full shadow-[0_0_10px_rgba(255,255,255,0.2)]" [style.background-color]="cat.color"></span>
+            {{ t('TECH_STACK.CATEGORIES.' + cat.key) }}
+          </h3>
+          <div class="absolute -bottom-4 left-0 w-full h-[1px] bg-gradient-to-r from-borderSubtle to-transparent opacity-30"></div>
+        </div>
+
+        <div class="flex flex-col gap-4">
+          <div *ngFor="let tech of cat.techs"
+               class="tech-item group flex items-center justify-between py-2 border-b border-white/[0.03] hover:border-primary/20 transition-all duration-500 cursor-default"
+               [style.--accent-color]="cat.color">
+            <span class="text-xs font-mono text-textMuted group-hover:text-textMain group-hover:translate-x-2 transition-all duration-500 uppercase tracking-widest">{{ tech.name }}</span>
+            <div class="opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center gap-2">
+              <span class="text-[8px] font-mono text-primary/60 uppercase tracking-tighter">Verified</span>
+              <div class="w-1 h-1 rounded-full bg-primary animate-pulse"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

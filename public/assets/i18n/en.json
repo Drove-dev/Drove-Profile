@@ -1,0 +1,152 @@
+{
+  "HEADER": {
+    "NAV": {
+      "ABOUT": "About",
+      "IMPACT": "Impact",
+      "EXPERIENCE": "Experience",
+      "ARCHITECTURE": "Architecture",
+      "TECH_STACK": "Stack",
+      "CONTACT": "Contact"
+    },
+    "SOCIALS": {
+      "LINKEDIN": "LinkedIn",
+      "GITHUB": "GitHub",
+      "EMAIL": "Email"
+    },
+    "LANG_BUTTON": "ES"
+  },
+  "FOOTER": {
+    "TAGLINE": "Architecting resilient software ecosystems with precision and passion.",
+    "MADE_WITH": "Crafted with ❤️ by DROVE",
+    "COPYRIGHT": "© 2026 DROVE. All rights reserved.",
+    "LINKS": {
+      "TITLE": "Quick Links",
+      "ABOUT": "About",
+      "IMPACT": "Impact",
+      "EXPERIENCE": "Professional Experience",
+      "ARCHITECTURE": "Architecture & Projects",
+      "TECH_STACK": "Technical Arsenal",
+      "CONTACT": "Contact"
+    },
+    "SOCIAL": {
+      "TITLE": "Connect"
+    }
+  },
+  "HERO": {
+    "BADGE": "FULLSTACK // NESTJS + ANGULAR + DOCKER",
+    "TITLE": {
+      "ENGINEERING": "Engineering",
+      "RESILIENT": "resilient",
+      "SOFTWARE": "software."
+    },
+    "SUBTITLE": {
+      "NAME": "I'm Eimar Romero",
+      "ROLE_DESC": "the Senior Engineer behind",
+      "DROVE": "DROVE",
+      "FOCUS": "Focused on building scalable ecosystems with",
+      "NEST_ANGULAR": "Angular and NestJS,",
+      "CONTAINERIZED": "containerized for high-availability environments."
+    },
+    "CTA": "Explore Impact"
+  },
+  "METRICS": {
+    "TITLE": "Impact & Metrics",
+    "SUBTITLE": "Quantifiable results by technology stack.",
+    "ANGULAR": {
+      "DESC": "Load time optimization via Lazy Loading & Signals.",
+      "FOOTER": "Enterprise components."
+    },
+    "NESTJS": {
+      "DESC": "API response time reduction through modular DTOs.",
+      "FOOTER": "Handled concurrent reqs."
+    },
+    "POSTGRES": {
+      "DESC": "Query performance boost via strategic indexing.",
+      "FOOTER": "Zero data loss in migration."
+    },
+    "DOCKER": {
+      "DESC": "Environment parity across Dev/Staging/Prod stages.",
+      "FOOTER": "Faster CI/CD pipeline runs."
+    }
+  },
+  "EXPERIENCE": {
+    "TITLE": "Professional Experience",
+    "FREELANCE": {
+      "DATE": "Oct 2025 - Present",
+      "ROLE": "Fullstack Developer & Consultant",
+      "COMPANY": "Freelance / Independent",
+      "DESC": "Collaborating with diverse clients to architect and deliver scalable web solutions. Focusing on fullstack ecosystems using NestJS and Angular with Dockerized deployments."
+    },
+    "SENIOR": {
+      "DATE": "Sep 2022 - Oct 2025",
+      "ROLE": "Senior Frontend Developer",
+      "COMPANY": "IMCS Group · U.S. Remote",
+      "DESC": "Led the architectural design and development of mission-critical enterprise applications. Championed component-driven design and strict adherence to Clean Code principles."
+    },
+    "ENGINEER": {
+      "DATE": "Oct 2021 - Sep 2022",
+      "ROLE": "Full Stack Software Engineer",
+      "COMPANY": "Unikasoft · Mexico",
+      "DESC": "Delivered an internal communication platform combining frontend leadership with robust backend ownership. Engineered real-time data flows and resilient APIs."
+    }
+  },
+  "PROJECTS": {
+    "BADGE": "Feature Project",
+    "ERRLY": "Errly",
+    "OBSERVABILITY": "Enterprise Observability Stack",
+    "DESC": "Errly is a distributed error monitoring system designed to handle massive event ingestion without compromising analysis speed. Built with a Clean Architecture approach to ensure strict multi-tenancy and data isolation.",
+    "CONTROL_PLANE": {
+      "TITLE": "Control Plane",
+      "DESC": "NestJS services managing secure SdkKeys and project lifecycles with near-zero latency."
+    },
+    "DATA_PLANE": {
+      "TITLE": "Data Plane",
+      "DESC": "High-throughput event ingestion engine with intelligent fingerprinting for noise reduction."
+    },
+    "CTA_EXPLAIN": "Explain Architecture",
+    "LIVE": "LIVE INSTANCE AVAILABLE",
+    "FRONTEND_ENG": "Frontend Engineering",
+    "REACTIVE_DASH": "Reactive Dashboards with Angular 21 Signals",
+    "REACTIVITY_TITLE": "Fine-grained reactivity:",
+    "REACTIVITY_DESC": "Zero unnecessary re-renders using Signals for real-time error streams.",
+    "DEVEX_TITLE": "Dockerized Devex:",
+    "DEVEX_DESC": "Consistent local-to-cloud parity ensuring seamless team collaboration.",
+    "TRACE_TITLE": "Terminal Trace: Business Logic Analysis",
+    "AI_EXPLAIN_LOADING": "Analyzing business impact of Errly architecture...",
+    "AI_EXPLAIN_CONTENT": "Errly provides critical observability by distilling massive error streams into actionable insights using intelligent fingerprinting, ensuring system stability and reducing MTTR by 50%."
+  },
+  "TECH_STACK": {
+    "LABEL": "Technical Arsenal",
+    "TITLE_PART1": "Technical",
+    "TITLE_PART2": "Arsenal",
+    "DESCRIPTION": "An evolving ecosystem of industrial-grade technologies, carefully selected for performance, resilience, and horizontal scalability.",
+    "CATEGORIES": {
+      "FRONTEND": "Frontend Architecture",
+      "BACKEND": "Backend Systems",
+      "INFRA": "Infra & DevOps",
+      "DATABASES": "Data Layer"
+    }
+  },
+  "CONTACT": {
+    "BADGE": "Get in Touch",
+    "SUBTITLE": "Have a mission-critical project or just want to chat about architecture? My inbox is always open.",
+    "DIRECT": {
+      "TITLE": "Direct Inquiries"
+    },
+    "AVAILABILITY": {
+      "TITLE": "Current Availability",
+      "STATUS": "Accepting new projects Q3 2026"
+    },
+    "FORM": {
+      "NAME": "Full Name",
+      "NAME_PLACEHOLDER": "John Doe",
+      "EMAIL": "Email Address",
+      "EMAIL_PLACEHOLDER": "john@example.com",
+      "MESSAGE": "Message",
+      "MESSAGE_PLACEHOLDER": "Tell me about your project...",
+      "SUBMIT": "Send Signal",
+      "SENDING": "Transmitting...",
+      "SUCCESS": "Message transmitted successfully."
+    }
+  }
+}

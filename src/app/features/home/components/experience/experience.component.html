@@ -1,0 +1,92 @@
+<section id="experience" *transloco="let t">
+  <div class="mb-10">
+    <h2 class="text-2xl font-bold tracking-tight text-white">
+      {{ t('EXPERIENCE.TITLE') }}
+    </h2>
+  </div>
+
+  <div class="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-borderSubtle before:to-transparent">
+
+    <!-- Freelance Role -->
+    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+      <div class="flex items-center justify-center w-10 h-10 rounded-full border border-primary bg-primary/10 text-primary shadow-[0_0_15px_rgba(56,189,248,0.3)] shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow-sm relative z-10">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+        </svg>
+      </div>
+      <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] tech-card p-6 rounded-xl border-primary/30">
+        <div class="flex flex-col mb-3">
+          <span class="text-xs font-mono text-primary mb-1">
+            {{ t('EXPERIENCE.FREELANCE.DATE') }}
+          </span>
+          <h3 class="font-bold text-white text-lg">
+            {{ t('EXPERIENCE.FREELANCE.ROLE') }}
+          </h3>
+          <span class="text-sm text-textMuted">
+            {{ t('EXPERIENCE.FREELANCE.COMPANY') }}
+          </span>
+        </div>
+        <p class="text-sm text-textMuted leading-relaxed mb-4">
+          {{ t('EXPERIENCE.FREELANCE.DESC') }}
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-2 py-1 text-xs font-mono rounded bg-primary/10 border border-primary/20 text-primary">NestJS</span>
+          <span class="px-2 py-1 text-xs font-mono rounded bg-primary/10 border border-primary/20 text-primary">Angular</span>
+          <span class="px-2 py-1 text-xs font-mono rounded bg-primary/10 border border-primary/20 text-primary">Docker</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Role 1 -->
+    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+      <div class="flex items-center justify-center w-10 h-10 rounded-full border border-borderSubtle bg-surface text-textMuted group-hover:text-primary group-hover:border-primary transition-colors shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow-sm relative z-10">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+        </svg>
+      </div>
+      <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] tech-card p-6 rounded-xl">
+        <div class="flex flex-col mb-3">
+          <span class="text-xs font-mono text-primary mb-1">{{ t('EXPERIENCE.SENIOR.DATE') }}</span>
+          <h3 class="font-bold text-white text-lg">
+            {{ t('EXPERIENCE.SENIOR.ROLE') }}
+          </h3>
+          <span class="text-sm text-textMuted">{{ t('EXPERIENCE.SENIOR.COMPANY') }}</span>
+        </div>
+        <p class="text-sm text-textMuted leading-relaxed mb-4">
+          {{ t('EXPERIENCE.SENIOR.DESC') }}
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-2 py-1 text-xs font-mono rounded bg-surface border border-borderSubtle">Angular</span>
+          <span class="px-2 py-1 text-xs font-mono rounded bg-surface border border-borderSubtle">TypeScript</span>
+          <span class="px-2 py-1 text-xs font-mono rounded bg-surface border border-borderSubtle">RxJS</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Role 2 -->
+    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+      <div class="flex items-center justify-center w-10 h-10 rounded-full border border-borderSubtle bg-surface text-textMuted group-hover:text-primary group-hover:border-primary transition-colors shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow-sm relative z-10">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+        </svg>
+      </div>
+      <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] tech-card p-6 rounded-xl">
+        <div class="flex flex-col mb-3">
+          <span class="text-xs font-mono text-primary mb-1">{{ t('EXPERIENCE.ENGINEER.DATE') }}</span>
+          <h3 class="font-bold text-white text-lg">
+            {{ t('EXPERIENCE.ENGINEER.ROLE') }}
+          </h3>
+          <span class="text-sm text-textMuted">{{ t('EXPERIENCE.ENGINEER.COMPANY') }}</span>
+        </div>
+        <p class="text-sm text-textMuted leading-relaxed mb-4">
+          {{ t('EXPERIENCE.ENGINEER.DESC') }}
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-2 py-1 text-xs font-mono rounded bg-surface border border-borderSubtle">Node.js</span>
+          <span class="px-2 py-1 text-xs font-mono rounded bg-surface border border-borderSubtle">Socket.IO</span>
+          <span class="px-2 py-1 text-xs font-mono rounded bg-surface border border-borderSubtle">MySQL</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

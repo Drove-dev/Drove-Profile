@@ -1,0 +1,152 @@
+{
+  "HEADER": {
+    "NAV": {
+      "ABOUT": "Sobre mí",
+      "IMPACT": "Impacto",
+      "EXPERIENCE": "Experiencia",
+      "ARCHITECTURE": "Arquitectura",
+      "TECH_STACK": "Stack",
+      "CONTACT": "Contacto"
+    },
+    "SOCIALS": {
+      "LINKEDIN": "LinkedIn",
+      "GITHUB": "GitHub",
+      "EMAIL": "Correo"
+    },
+    "LANG_BUTTON": "EN"
+  },
+  "FOOTER": {
+    "TAGLINE": "Arquitectando ecosistemas de software resilientes con precisión y pasión.",
+    "MADE_WITH": "Creado con ❤️ por DROVE",
+    "COPYRIGHT": "© 2026 DROVE. Todos los derechos reservados.",
+    "LINKS": {
+      "TITLE": "Enlaces Rápidos",
+      "ABOUT": "Sobre mí",
+      "IMPACT": "Impacto",
+      "EXPERIENCE": "Experiencia Profesional",
+      "ARCHITECTURE": "Arquitectura y Proyectos",
+      "TECH_STACK": "Arsenal Técnico",
+      "CONTACT": "Contacto"
+    },
+    "SOCIAL": {
+      "TITLE": "Conectar"
+    }
+  },
+  "HERO": {
+    "BADGE": "FULLSTACK // NESTJS + ANGULAR + DOCKER",
+    "TITLE": {
+      "ENGINEERING": "Ingeniería de",
+      "RESILIENT": "software",
+      "SOFTWARE": "resiliente."
+    },
+    "SUBTITLE": {
+      "NAME": "Soy Eimar Romero",
+      "ROLE_DESC": "el ingeniero Senior detrás de",
+      "DROVE": "DROVE",
+      "FOCUS": "Enfocado en construir ecosistemas escalables con",
+      "NEST_ANGULAR": "Angular y NestJS,",
+      "CONTAINERIZED": "contenedorizados para entornos de alta disponibilidad."
+    },
+    "CTA": "Explorar Impacto"
+  },
+  "METRICS": {
+    "TITLE": "Impacto y Métricas",
+    "SUBTITLE": "Resultados cuantificables por stack tecnológico.",
+    "ANGULAR": {
+      "DESC": "Optimización del tiempo de carga mediante Lazy Loading y Signals.",
+      "FOOTER": "Componentes empresariales."
+    },
+    "NESTJS": {
+      "DESC": "Reducción del tiempo de respuesta del API mediante DTOs modulares.",
+      "FOOTER": "Peticiones concurrentes manejadas."
+    },
+    "POSTGRES": {
+      "DESC": "Aumento del rendimiento de consultas mediante indexación estratégica.",
+      "FOOTER": "Cero pérdida de datos en migración."
+    },
+    "DOCKER": {
+      "DESC": "Paridad de entorno en todas las fases: Dev/Staging/Prod.",
+      "FOOTER": "Ejecuciones de CI/CD más rápidas."
+    }
+  },
+  "EXPERIENCE": {
+    "TITLE": "Experiencia Profesional",
+    "FREELANCE": {
+      "DATE": "Oct 2025 - Presente",
+      "ROLE": "Consultor y Desarrollador Fullstack",
+      "COMPANY": "Freelance / Independiente",
+      "DESC": "Colaborando con diversos clientes para arquitectar y entregar soluciones web escalables. Enfocado en ecosistemas fullstack usando NestJS y Angular con despliegues en Docker."
+    },
+    "SENIOR": {
+      "DATE": "Sep 2022 - Oct 2025",
+      "ROLE": "Desarrollador Frontend Senior",
+      "COMPANY": "IMCS Group · Remoto EE.UU.",
+      "DESC": "Lideré el diseño arquitectónico y desarrollo de aplicaciones empresariales de misión crítica. Promoví el diseño orientado a componentes y la adherencia estricta a principios de Clean Code."
+    },
+    "ENGINEER": {
+      "DATE": "Oct 2021 - Sep 2022",
+      "ROLE": "Ingeniero de Software Full Stack",
+      "COMPANY": "Unikasoft · México",
+      "DESC": "Desarrollé una plataforma de comunicación interna combinando liderazgo en frontend con responsabilidad en backend. Diseñé flujos de datos en tiempo real y APIs resilientes."
+    }
+  },
+  "PROJECTS": {
+    "BADGE": "Proyecto Destacado",
+    "ERRLY": "Errly.io",
+    "OBSERVABILITY": "Stack de Observabilidad Empresarial",
+    "DESC": "Errly es un sistema de monitoreo de errores distribuido diseñado para manejar una ingesta masiva de eventos sin comprometer la velocidad de análisis. Construido con Clean Architecture para asegurar multi-tenencia estricta y aislamiento de datos.",
+    "CONTROL_PLANE": {
+      "TITLE": "Plano de Control",
+      "DESC": "Servicios NestJS que gestionan claves SDK seguras y ciclos de vida de proyectos con latencia casi nula."
+    },
+    "DATA_PLANE": {
+      "TITLE": "Plano de Datos",
+      "DESC": "Motor de ingesta de eventos de alto rendimiento con huellas inteligentes para reducción de ruido."
+    },
+    "CTA_EXPLAIN": "Explicar Arquitectura",
+    "LIVE": "INSTANCIA EN VIVO DISPONIBLE",
+    "FRONTEND_ENG": "Ingeniería Frontend",
+    "REACTIVE_DASH": "Dashboards Reactivos con Angular 21 Signals",
+    "REACTIVITY_TITLE": "Reactividad de grano fino:",
+    "REACTIVITY_DESC": "Cero re-renderizados innecesarios usando Signals para flujos de errores en tiempo real.",
+    "DEVEX_TITLE": "Devex Dockerizada:",
+    "DEVEX_DESC": "Paridad constante local-nube asegurando una colaboración fluida del equipo.",
+    "TRACE_TITLE": "Terminal Trace: Análisis de Lógica de Negocio",
+    "AI_EXPLAIN_LOADING": "Analizando impacto de negocio de la arquitectura de Errly...",
+    "AI_EXPLAIN_CONTENT": "Errly proporciona observabilidad crítica destilando flujos masivos de errores en información procesable mediante huellas inteligentes, asegurando la estabilidad del sistema y reduciendo el MTTR en un 50%."
+  },
+  "TECH_STACK": {
+    "LABEL": "Arsenal Técnico",
+    "TITLE_PART1": "Arsenal",
+    "TITLE_PART2": "Técnico",
+    "DESCRIPTION": "Un ecosistema en evolución de tecnologías de grado industrial, cuidadosamente seleccionadas por su rendimiento, resiliencia y escalabilidad horizontal.",
+    "CATEGORIES": {
+      "FRONTEND": "Arquitectura Frontend",
+      "BACKEND": "Sistemas Backend",
+      "INFRA": "Infra & DevOps",
+      "DATABASES": "Capa de Datos"
+    }
+  },
+  "CONTACT": {
+    "BADGE": "Contacto",
+    "SUBTITLE": "¿Tienes un proyecto crítico o simplemente quieres hablar de arquitectura? Mi bandeja de entrada está abierta.",
+    "DIRECT": {
+      "TITLE": "Consultas Directas"
+    },
+    "AVAILABILITY": {
+      "TITLE": "Disponibilidad Actual",
+      "STATUS": "Aceptando nuevos proyectos Q3 2026"
+    },
+    "FORM": {
+      "NAME": "Nombre Completo",
+      "NAME_PLACEHOLDER": "Juan Pérez",
+      "EMAIL": "Correo Electrónico",
+      "EMAIL_PLACEHOLDER": "juan@ejemplo.com",
+      "MESSAGE": "Mensaje",
+      "MESSAGE_PLACEHOLDER": "Cuéntame sobre tu proyecto...",
+      "SUBMIT": "Enviar Señal",
+      "SENDING": "Transmitiendo...",
+      "SUCCESS": "Mensaje transmitido con éxito."
+    }
+  }
+}

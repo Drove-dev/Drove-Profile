@@ -1,0 +1,47 @@
+:host {
+  display: block;
+}
+
+input:focus, textarea:focus {
+  background-color: rgba(56, 189, 248, 0.02);
+  box-shadow: 0 0 20px -5px rgba(56, 189, 248, 0.1);
+}
+
+/* Staggered Content Reveal - Triggered by app-contact .active class from global observer */
+.contact-reveal-header,
+.contact-reveal-form,
+.contact-reveal-sidebar {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+app-contact.active .contact-reveal-header {
+  transition-delay: 0.1s;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+app-contact.active .contact-reveal-form {
+  transition-delay: 0.3s;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+app-contact.active .contact-reveal-sidebar {
+  transition-delay: 0.5s;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Form Styles */
+input, textarea {
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  #contact {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}

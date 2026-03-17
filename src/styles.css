@@ -1,3 +1,139 @@
-/* You can add global styles to this file, and also import other style files */
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 @import "tailwindcss";
+
+@theme {
+  /* Fonts */
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Colors mapped to HTML naming */
+  --color-background: #050505;
+  --color-surface: #0a0a0a;
+  --color-surfaceHover: #141414;
+  --color-primary: #38bdf8;
+  --color-textMain: #ededed;
+  --color-textMuted: #a1a1aa;
+  --color-borderSubtle: #1f1f22;
+
+  /* Gradients */
+  --background-image-radial-glow: radial-gradient(circle at center, rgba(56, 189, 248, 0.15), transparent 70%);
+  --background-image-card-gradient: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+
+  /* Custom Animations */
+  @keyframes reveal {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes dot-flashing {
+    0% { background-color: var(--color-primary); }
+    50%, 100% { background-color: rgba(56, 189, 248, 0.2); }
+  }
+
+  --animate-reveal: reveal 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  --animate-dot-flashing: dot-flashing 1s infinite linear alternate;
+}
+
+/* Light Theme Overrides */
+.light {
+  --color-background: #ffffff;
+  --color-surface: #f8fafc;
+  --color-surface-hover: #f1f5f9;
+  --color-primary: #0ea5e9;
+  --color-text-main: #0f172a;
+  --color-text-muted: #64748b;
+  --color-border-subtle: #e2e8f0;
+  --background-image-card-gradient: linear-gradient(135deg, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-textMain);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    margin: 0;
+  }
+
+  app-header, app-hero, app-metrics, app-experience, app-projects, app-tech-stack, app-contact {
+    display: block;
+  }
+
+  ::selection {
+    background-color: rgba(56, 189, 248, 0.3); /* primary/30 */
+    color: #ffffff;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-border-subtle);
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-text-muted);
+  }
+}
+
+@layer utilities {
+  .bg-grid {
+    background-image: radial-gradient(var(--color-borderSubtle) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  .tech-card {
+    background-image: var(--background-image-card-gradient);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-borderSubtle);
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+  }
+
+  .tech-card:hover {
+    border-color: var(--color-primary);
+    background-color: var(--color-surfaceHover);
+    transform: translateY(-2px);
+  }
+
+  .header-blur {
+    backdrop-filter: blur(12px);
+    background-color: rgba(5, 5, 5, 0.8);
+    border-bottom: 1px solid var(--color-borderSubtle);
+  }
+
+  .light .header-blur {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .dot-flashing {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: var(--color-primary);
+    animation: var(--animate-dot-flashing);
+  }
+
+  .bg-radial-glow {
+    background-image: var(--background-image-radial-glow);
+  }
+}
+

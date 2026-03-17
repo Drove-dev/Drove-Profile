@@ -1,0 +1,26 @@
+<section id="about" class="relative" *transloco="let t">
+  <div class="inline-flex items-center gap-2 px-3 py-1 mb-8 rounded-full border border-borderSubtle bg-surface text-xs font-mono text-textMuted uppercase tracking-widest">
+    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+    {{ t('HERO.BADGE') }}
+  </div>
+  <h1 class="text-5xl md:text-7xl font-bold tracking-tighter mb-8 leading-[1.05] text-white">
+    <span>{{ t('HERO.TITLE.ENGINEERING') }}</span> <br>
+    <span class="text-textMuted italic shrink-0 mr-5">{{ t('HERO.TITLE.RESILIENT') }}</span>
+    <span>{{ t('HERO.TITLE.SOFTWARE') }}</span>
+  </h1>
+
+  <p class="text-lg md:text-xl text-textMuted leading-relaxed max-w-3xl mb-12 font-light">
+    <span class="text-textMain font-medium">{{ t('HERO.SUBTITLE.NAME') }}</span> —
+    <span>{{ t('HERO.SUBTITLE.ROLE_DESC') }} &nbsp;</span>
+    <span class="text-textMain font-medium">{{ t('HERO.SUBTITLE.DROVE') }}</span>.
+    <span>{{ t('HERO.SUBTITLE.FOCUS') }}</span>
+    <span class="text-primary font-medium">&nbsp;{{ t('HERO.SUBTITLE.NEST_ANGULAR') }}&nbsp;</span>
+    <span>{{ t('HERO.SUBTITLE.CONTAINERIZED') }}</span>
+  </p>
+
+  <div class="flex flex-wrap gap-4">
+    <a href="#metrics" class="px-6 py-3 rounded text-sm font-medium bg-white text-black hover:bg-gray-200 transition-colors">
+      {{ t('HERO.CTA') }}
+    </a>
+  </div>
+</section>
