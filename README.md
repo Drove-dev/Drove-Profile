@@ -39,32 +39,32 @@ The codebase mirrors the same standards applied in production environments: lazy
 
 ```
 Drove-Web/
-├── public/                 # Recursos estáticos (Favicons, Imágenes, i18n)
+├── public/                 # Static assets (Favicons, Images, i18n)
 │   ├── assets/
 │   │   ├── images/
-│   │   └── i18n/           # Archivos de traducción (en.json, es.json)
+│   │   └── i18n/           # Translation files (en.json, es.json)
 │   ├── favicon.ico
 │   └── site.webmanifest
 ├── src/
-│   ├── app/                # Lógica de la aplicación
-│   │   ├── features/       # Módulos de funcionalidad (Lazy Loaded)
-│   │   │   ├── home/       # Componentes de la página principal
-│   │   │   └── not-found/  # Componente 404
-│   │   ├── shared/         # Componentes y utilidades reutilizables
-│   │   │   └── components/visuals/  # Elementos gráficos (Waves, etc.)
+│   ├── app/                # Application logic
+│   │   ├── features/       # Feature modules (Lazy Loaded)
+│   │   │   ├── home/       # Home page components
+│   │   │   └── not-found/  # 404 Component
+│   │   ├── shared/         # Reusable components & utilities
+│   │   │   └── components/visuals/  # Graphical elements (Waves, etc.)
 │   │   ├── transloco-loader.ts
-│   │   ├── app.config.ts   # Configuración de proveedores (Routes, HttpClient)
-│   │   ├── app.routes.ts   # Definición de rutas raíz
-│   │   ├── app.ts          # Componente raíz (Standalone)
+│   │   ├── app.config.ts   # Provider configuration (Routes, HttpClient)
+│   │   ├── app.routes.ts   # Root routing definition
+│   │   ├── app.ts          # Root component (Standalone)
 │   │   ├── app.html
 │   │   └── app.css
-│   ├── main.ts             # Punto de entrada de la aplicación
-│   ├── index.html          # HTML principal (contiene Meta Tags SEO)
-│   └── styles.css          # Estilos globales (Tailwind CSS 4)
-├── angular.json            # Configuración de Angular CLI
-├── package.json            # Dependencias y scripts de npm
-├── tsconfig.json           # Configuración de TypeScript
-└── vercel.json             # Configuración para despliegue en Vercel
+│   ├── main.ts             # Application entry point
+│   ├── index.html          # Main HTML (contains SEO Meta Tags)
+│   └── styles.css          # Global styles (Tailwind CSS 4)
+├── angular.json            # Angular CLI configuration
+├── package.json            # npm dependencies and scripts
+├── tsconfig.json           # TypeScript configuration
+└── vercel.json             # Vercel deployment configuration
 ```
 
 ---
