@@ -17,13 +17,6 @@
 
 ---
 
-## 📸 Demo
-
-![Portfolio Preview](https://drove.dev/assets/preview.png)
-_Live preview available at [drove.dev](https://drove.dev)_
-
----
-
 ## ✨ Features
 
 - **Angular 21 Core:** Leveraging Standalone Components and the new `@angular/build:application` builder for maximum performance.
