@@ -104,38 +104,6 @@ All design tokens are configured globally in `styles.css` using **Tailwind CSS v
 
 ---
 
-## 🚀 Getting Started
-
-### Prerequisites
-
-- **Node.js** `>= 20.x`
-- **Angular CLI** `>= 21.x`
-
-```bash
-npm install -g @angular/cli
-```
-
-### Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/Drove-dev/drove-portfolio.git
-cd drove-portfolio
-
-# Install dependencies
-npm install
-```
-
-### Run Locally
-
-```bash
-ng serve
-```
-
-Navigate to `http://localhost:4200`. The app hot-reloads on any file change.
-
----
-
 ## 🌐 Internationalization — Transloco
 
 Drove supports **English** (default) and **Spanish** via `@jsverse/transloco`. Language toggles at runtime without page reload using the EN/ES button in the header.
