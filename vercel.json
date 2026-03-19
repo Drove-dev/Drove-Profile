@@ -1,8 +1,8 @@
 {
+  "buildCommand": "npm run build -- --configuration=production",
+  "outputDirectory": "dist/Drove-Web/browser",
+  "framework": "angular",
   "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
