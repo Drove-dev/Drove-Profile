@@ -21,7 +21,7 @@
     <!-- Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-20">
       <div *ngFor="let cat of categories; let i = index"
-           class="space-y-10 tech-reveal-category"
+           class="space-y-10 reveal"
            [style.transition-delay]="i * 100 + 'ms'">
 
         <div class="relative">
@@ -34,7 +34,7 @@
 
         <div class="flex flex-col gap-4">
           <div *ngFor="let tech of cat.techs"
-               class="tech-item group flex items-center justify-between py-2 border-b border-white/[0.03] hover:border-primary/20 transition-all duration-500 cursor-default"
+               class="tech-item group flex items-center justify-between py-2 border-b border-white/[0.02] hover:border-primary/20 transition-all duration-500 cursor-default bg-transparent hover:bg-white/[0.02] px-2 rounded-t-sm -mx-2"
                [style.--accent-color]="cat.color">
             <span class="text-xs font-mono text-textMuted group-hover:text-textMain group-hover:translate-x-2 transition-all duration-500 uppercase tracking-widest">{{ tech.name }}</span>
             <div class="opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center gap-2">

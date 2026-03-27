@@ -7,6 +7,8 @@ import {
   AfterViewInit,
   ViewEncapsulation,
   inject,
+  NgZone,
+  DestroyRef,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeroComponent } from './components/hero/hero.component';
@@ -39,6 +41,9 @@ import { ContactComponent } from './components/contact/contact.component';
 })
 export class HomeComponent implements OnInit, AfterViewInit {
   private translocoService = inject(TranslocoService);
+  private ngZone = inject(NgZone);
+  private destroyRef = inject(DestroyRef);
+
   isScrolled = signal(false);
 
   toggleLanguage() {
@@ -51,31 +56,40 @@ export class HomeComponent implements OnInit, AfterViewInit {
     return this.translocoService.getActiveLang();
   }
 
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-    this.isScrolled.set(window.scrollY > 20);
-  }
-
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.ngZone.runOutsideAngular(() => {
+      const onScroll = () => {
+        const scrolled = window.scrollY > 20;
+        if (this.isScrolled() !== scrolled) {
+          this.ngZone.run(() => this.isScrolled.set(scrolled));
+        }
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      this.destroyRef.onDestroy(() => window.removeEventListener('scroll', onScroll));
+    });
+  }
 
   ngAfterViewInit() {
     this.initRevealObserver();
   }
 
   initRevealObserver() {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-          }
-        });
-      },
-      { threshold: 0.1 },
-    );
+    setTimeout(() => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('active');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: '0px 0px -50px 0px' },
+      );
 
-    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+      document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    }, 150);
   }
 }

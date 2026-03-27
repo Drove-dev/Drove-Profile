@@ -17,8 +17,8 @@
   },
   "FOOTER": {
     "TAGLINE": "Arquitectando ecosistemas de software resilientes con precisión y pasión.",
-    "MADE_WITH": "Creado con ❤️ por DROVE",
-    "COPYRIGHT": "© 2026 DROVE. Todos los derechos reservados.",
+    "MADE_WITH": "Creado con ❤️ por DROVE.dev",
+    "COPYRIGHT": "© 2026 DROVE.dev. Todos los derechos reservados.",
     "LINKS": {
       "TITLE": "Enlaces Rápidos",
       "ABOUT": "Sobre mí",
@@ -42,7 +42,7 @@
     "SUBTITLE": {
       "NAME": "Soy Eimar Romero",
       "ROLE_DESC": "el ingeniero Senior detrás de",
-      "DROVE": "DROVE",
+      "DROVE": "DROVE.dev",
       "FOCUS": "Enfocado en construir ecosistemas escalables con",
       "NEST_ANGULAR": "Angular y NestJS,",
       "CONTAINERIZED": "contenedorizados para entornos de alta disponibilidad."
@@ -92,9 +92,9 @@
   },
   "PROJECTS": {
     "BADGE": "Proyecto Destacado",
-    "ERRLY": "Errly.io",
+    "drove_trace": "Drove Trace",
     "OBSERVABILITY": "Stack de Observabilidad Empresarial",
-    "DESC": "Errly es un sistema de monitoreo de errores distribuido diseñado para manejar una ingesta masiva de eventos sin comprometer la velocidad de análisis. Construido con Clean Architecture para asegurar multi-tenencia estricta y aislamiento de datos.",
+    "DESC": "Drove Trace es un sistema de monitoreo de errores distribuido diseñado para manejar una ingesta masiva de eventos sin comprometer la velocidad de análisis. Construido con Clean Architecture para asegurar multi-tenencia estricta y aislamiento de datos.",
     "CONTROL_PLANE": {
       "TITLE": "Plano de Control",
       "DESC": "Servicios NestJS que gestionan claves SDK seguras y ciclos de vida de proyectos con latencia casi nula."
@@ -112,8 +112,8 @@
     "DEVEX_TITLE": "Devex Dockerizada:",
     "DEVEX_DESC": "Paridad constante local-nube asegurando una colaboración fluida del equipo.",
     "TRACE_TITLE": "Terminal Trace: Análisis de Lógica de Negocio",
-    "AI_EXPLAIN_LOADING": "Analizando impacto de negocio de la arquitectura de Errly...",
-    "AI_EXPLAIN_CONTENT": "Errly proporciona observabilidad crítica destilando flujos masivos de errores en información procesable mediante huellas inteligentes, asegurando la estabilidad del sistema y reduciendo el MTTR en un 50%."
+    "AI_EXPLAIN_LOADING": "Analizando impacto de negocio de la arquitectura de Drove Trace...",
+    "AI_EXPLAIN_CONTENT": "Drove Trace proporciona observabilidad crítica destilando flujos masivos de errores en información procesable mediante huellas inteligentes, asegurando la estabilidad del sistema y reduciendo el MTTR en un 50%."
   },
   "TECH_STACK": {
     "LABEL": "Arsenal Técnico",
