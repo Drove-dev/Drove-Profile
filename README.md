@@ -1,4 +1,4 @@
-# DROVE — Scalable Web Engineering Portfolio
+# DROVE.dev — Scalable Web Engineering Portfolio
 
 > Personal engineering brand and portfolio of **Eimar Romero**, Senior Fullstack Engineer.  
 > Built with Angular 21, Tailwind CSS 4, and a dark-first design system.
@@ -26,7 +26,7 @@ The codebase mirrors the same standards applied in production environments: lazy
 - 🌗 **Dark-first design system** — token-based palette using Tailwind v4 `@theme`
 - 🌎 **Bilingual EN / ES** — runtime language switching via `@jsverse/transloco`
 - 📊 **Impact & Metrics** — quantified results per tech stack (Angular, NestJS, PostgreSQL, Docker)
-- 🚀 **Featured Project** — Errly.io distributed error monitoring system with detailed architecture breakdown
+- 🚀 **Featured Project** — Drove Trace distributed error monitoring system with detailed architecture breakdown
 - 💼 **Professional Timeline** — animated vertical timeline with full role history
 - 🛠️ **Technical Arsenal** — full tech stack grouped by category with hover micro-interactions
 - 📬 **Contact** — EmailJS integration, zero backend required
@@ -169,16 +169,16 @@ This is a personal portfolio project. Issues and suggestions are welcome via [Gi
 
 ## 📄 License
 
-© 2026 **DROVE** — Architected by Eimar Romero.  
-Brand name, logo, and content are property of DROVE.
+© 2026 **DROVE.dev** — Architected by Eimar Romero.  
+Brand name, logo, and content are property of DROVE.dev.
 
 ---
 
 <div align="center">
   <br/>
-  <img src="public/assets/images/logo.svg" width="42" alt="Drove Logo" />
+  <img src="public/assets/images/logo/Drove Vertical.svg" width="100" alt="Drove Logo" />
   <br/><br/>
-  <sub><strong>DROVE</strong> — Architecting resilient software ecosystems with precision and passion.</sub>
+  <sub><strong>DROVE.dev</strong> — Architecting resilient software ecosystems with precision and passion.</sub>
   <br/><br/>
   <a href="https://www.linkedin.com/in/eimar-romero/">LinkedIn</a> ·
   <a href="https://github.com/Drove-dev">GitHub</a> ·

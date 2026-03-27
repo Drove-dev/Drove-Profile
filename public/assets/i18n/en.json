@@ -17,8 +17,8 @@
   },
   "FOOTER": {
     "TAGLINE": "Architecting resilient software ecosystems with precision and passion.",
-    "MADE_WITH": "Crafted with ❤️ by DROVE",
-    "COPYRIGHT": "© 2026 DROVE. All rights reserved.",
+    "MADE_WITH": "Crafted with ❤️ by DROVE.dev",
+    "COPYRIGHT": "© 2026 DROVE.dev. All rights reserved.",
     "LINKS": {
       "TITLE": "Quick Links",
       "ABOUT": "About",
@@ -42,7 +42,7 @@
     "SUBTITLE": {
       "NAME": "I'm Eimar Romero",
       "ROLE_DESC": "the Senior Engineer behind",
-      "DROVE": "DROVE",
+      "DROVE": "DROVE.dev",
       "FOCUS": "Focused on building scalable ecosystems with",
       "NEST_ANGULAR": "Angular and NestJS,",
       "CONTAINERIZED": "containerized for high-availability environments."
@@ -92,9 +92,9 @@
   },
   "PROJECTS": {
     "BADGE": "Feature Project",
-    "ERRLY": "Errly",
+    "drove_trace": "Drove Trace",
     "OBSERVABILITY": "Enterprise Observability Stack",
-    "DESC": "Errly is a distributed error monitoring system designed to handle massive event ingestion without compromising analysis speed. Built with a Clean Architecture approach to ensure strict multi-tenancy and data isolation.",
+    "DESC": "Drove Trace is a distributed error monitoring system designed to handle massive event ingestion without compromising analysis speed. Built with a Clean Architecture approach to ensure strict multi-tenancy and data isolation.",
     "CONTROL_PLANE": {
       "TITLE": "Control Plane",
       "DESC": "NestJS services managing secure SdkKeys and project lifecycles with near-zero latency."
@@ -112,8 +112,8 @@
     "DEVEX_TITLE": "Dockerized Devex:",
     "DEVEX_DESC": "Consistent local-to-cloud parity ensuring seamless team collaboration.",
     "TRACE_TITLE": "Terminal Trace: Business Logic Analysis",
-    "AI_EXPLAIN_LOADING": "Analyzing business impact of Errly architecture...",
-    "AI_EXPLAIN_CONTENT": "Errly provides critical observability by distilling massive error streams into actionable insights using intelligent fingerprinting, ensuring system stability and reducing MTTR by 50%."
+    "AI_EXPLAIN_LOADING": "Analyzing business impact of Drove Trace architecture...",
+    "AI_EXPLAIN_CONTENT": "Drove Trace provides critical observability by distilling massive error streams into actionable insights using intelligent fingerprinting, ensuring system stability and reducing MTTR by 50%."
   },
   "TECH_STACK": {
     "LABEL": "Technical Arsenal",
