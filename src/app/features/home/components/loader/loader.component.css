@@ -1,0 +1,262 @@
+.loader-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #080c14;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.loader-exit {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  width: 280px;
+}
+
+/* ── Logo + anillos ── */
+.loader-logo-wrap {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid transparent;
+}
+
+.loader-ring--outer {
+  width: 160px;
+  height: 160px;
+  border-top-color: #38bdf8;
+  border-right-color: #38bdf840;
+  animation: spin 2.4s linear infinite;
+}
+
+.loader-ring--inner {
+  width: 124px;
+  height: 124px;
+  border-bottom-color: #6366f1;
+  border-left-color: #6366f140;
+  animation: spin 1.8s linear infinite reverse;
+}
+
+.loader-logo-bg {
+  width: 88px;
+  height: 88px;
+  border-radius: 22px;
+  background: rgba(56, 189, 248, 0.06);
+  border: 0.5px solid rgba(56, 189, 248, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: pulse-soft 2.5s ease-in-out infinite;
+}
+
+.loader-logo-img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+/* ── Contador ── */
+.loader-counter {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+  line-height: 1;
+}
+
+.loader-percent {
+  font-family: 'Courier New', monospace;
+  font-size: 52px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.04em;
+  min-width: 3ch;
+  text-align: right;
+  transition: all 0.08s linear;
+  font-variant-numeric: tabular-nums;
+}
+
+.loader-percent-sign {
+  font-family: 'Courier New', monospace;
+  font-size: 20px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.25);
+  margin-bottom: 4px;
+}
+
+/* ── Status ── */
+.loader-status {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  height: 16px;
+}
+
+.loader-status-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #38bdf8;
+  animation: blink 1.2s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+.loader-status-text {
+  font-family: 'Courier New', monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.35);
+  transition: opacity 0.3s ease;
+}
+
+/* ── Barra de progreso ── */
+.loader-bar-track {
+  width: 100%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 999px;
+  overflow: hidden;
+  position: relative;
+}
+
+.loader-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #6366f1, #38bdf8);
+  transition: width 0.1s linear;
+  position: relative;
+}
+
+.loader-bar-shimmer {
+  position: absolute;
+  top: 0;
+  width: 8%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
+  border-radius: 999px;
+  transition: left 0.1s linear, opacity 0.2s ease;
+  pointer-events: none;
+}
+
+/* ── Marcadores ── */
+.loader-bar-markers {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Courier New', monospace;
+  font-size: 9px;
+  color: rgba(255, 255, 255, 0.12);
+  letter-spacing: 0.05em;
+  margin-top: -18px;
+}
+
+/* ── Keyframes ── */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.7; transform: scale(0.96); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.2; }
+}
+
+/* ── Responsive ── */
+@media (max-width: 480px) {
+  .loader-content {
+    width: 240px;
+    gap: 22px;
+  }
+
+  .loader-logo-wrap {
+    width: 128px;
+    height: 128px;
+  }
+
+  .loader-ring--outer {
+    width: 128px;
+    height: 128px;
+  }
+
+  .loader-ring--inner {
+    width: 98px;
+    height: 98px;
+  }
+
+  .loader-logo-bg {
+    width: 70px;
+    height: 70px;
+    border-radius: 18px;
+  }
+
+  .loader-logo-img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .loader-percent {
+    font-size: 42px;
+  }
+
+  .loader-bar-track {
+    width: 100%;
+  }
+}
+
+@media (max-width: 360px) {
+  .loader-content {
+    width: 200px;
+    gap: 18px;
+  }
+
+  .loader-logo-wrap {
+    width: 108px;
+    height: 108px;
+  }
+
+  .loader-ring--outer {
+    width: 108px;
+    height: 108px;
+  }
+
+  .loader-ring--inner {
+    width: 82px;
+    height: 82px;
+  }
+
+  .loader-logo-bg {
+    width: 58px;
+    height: 58px;
+    border-radius: 14px;
+  }
+
+  .loader-logo-img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .loader-percent {
+    font-size: 36px;
+  }
+}

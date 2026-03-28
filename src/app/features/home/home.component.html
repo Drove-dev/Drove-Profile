@@ -1,3 +1,7 @@
+@if (showLoader()) {
+  <app-loader (complete)="onLoaderComplete()"></app-loader>
+}
+
 <div class="selection:bg-primary/30 selection:text-white bg-background text-textMain font-sans min-h-screen">
   <!-- Fixed subtle glows and grid -->
   <div class="fixed inset-0 bg-radial-glow z-0 pointer-events-none"></div>
@@ -65,16 +69,46 @@
 </header>
 
   <!-- Main Content -->
-  <main class="max-w-5xl mx-auto px-6 pt-40 pb-32 space-y-32 relative z-10">
-    <app-hero class="reveal block"></app-hero>
-    <app-projects class="reveal block"></app-projects>
-    <app-experience class="reveal block"></app-experience>
-    <app-metrics class="reveal block"></app-metrics>
-    <app-tech-stack class="reveal block"></app-tech-stack>
+  <main class="w-full pt-40 pb-32 flex flex-col gap-32 relative z-10 overflow-hidden">
+    <!-- HERO — transparente (par) -->
+    <div class="w-full">
+      <div class="max-w-5xl mx-auto px-6">
+        <app-hero class="reveal block"></app-hero>
+      </div>
+    </div>
+
+    <!-- PROJECTS — con fondo (impar) -->
+    <div class="w-full py-20 bg-surface/90 border-y border-white/[0.06] backdrop-blur-sm">
+      <div class="max-w-5xl mx-auto px-6">
+        <app-projects class="reveal block"></app-projects>
+      </div>
+    </div>
+
+    <!-- EXPERIENCE — transparente (par) -->
+    <div class="w-full">
+      <div class="max-w-5xl mx-auto px-6">
+        <app-experience class="reveal block"></app-experience>
+      </div>
+    </div>
+
+    <!-- METRICS — con fondo (impar) -->
+    <div class="w-full py-20 bg-surface/90 border-y border-white/[0.06] backdrop-blur-sm">
+      <div class="max-w-5xl mx-auto px-6">
+        <app-metrics class="reveal block"></app-metrics>
+      </div>
+    </div>
+
+    <!-- TECH STACK — transparente (par) -->
+    <div class="w-full">
+      <div class="max-w-5xl mx-auto px-6">
+        <app-tech-stack class="reveal block"></app-tech-stack>
+      </div>
+    </div>
+
     <!-- <app-contact class="reveal block"></app-contact> -->
   </main>
 
-  <footer class="border-t border-white/5 bg-surface/10 pt-20 pb-10 relative z-10" *transloco="let t">
+  <footer class="border-t border-white/5 bg-surface/90 pt-20 pb-10 relative z-10" *transloco="let t">
     <div class="max-w-5xl mx-auto px-6">
       <div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
         <!-- Brand & Tagline -->

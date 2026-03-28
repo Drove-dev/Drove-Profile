@@ -33,7 +33,7 @@
     }
   },
   "HERO": {
-    "BADGE": "FULLSTACK // NESTJS + ANGULAR + DOCKER",
+    "BADGE": "FULLSTACK // ABIERTO A NUEVAS OPORTUNIDADES.",
     "TITLE": {
       "ENGINEERING": "Ingeniería de",
       "RESILIENT": "software",
@@ -41,11 +41,11 @@
     },
     "SUBTITLE": {
       "NAME": "Soy Eimar Romero",
-      "ROLE_DESC": "el ingeniero Senior detrás de",
+      "ROLE_DESC": "el ingeniero detrás de",
       "DROVE": "DROVE.dev",
-      "FOCUS": "Enfocado en construir ecosistemas escalables con",
-      "NEST_ANGULAR": "Angular y NestJS,",
-      "CONTAINERIZED": "contenedorizados para entornos de alta disponibilidad."
+      "FOCUS": "Construyendo cosas de extremo a extremo,",
+      "NEST_ANGULAR": "desde el píxel hasta el servidor,",
+      "CONTAINERIZED": "contenedorizado para entornos de alta disponibilidad."
     },
     "CTA": "Explorar Impacto"
   },
@@ -53,58 +53,58 @@
     "TITLE": "Impacto y Métricas",
     "SUBTITLE": "Resultados cuantificables por stack tecnológico.",
     "ANGULAR": {
-      "DESC": "Optimización del tiempo de carga mediante Lazy Loading y Signals.",
-      "FOOTER": "Componentes empresariales."
+      "DESC": "Optimización de Core Web Vitals, logrando un Largest Contentful Paint (LCP) un 35% más rápido mediante la carga diferida (lazy loading) a nivel de ruta.",
+      "FOOTER": "Reducción de la sobrecarga de la CPU del navegador en un 20% al migrar el estado complejo a Angular Signals para una reactividad de grano fino."
     },
     "NESTJS": {
-      "DESC": "Reducción del tiempo de respuesta del API mediante DTOs modulares.",
-      "FOOTER": "Peticiones concurrentes manejadas."
+      "DESC": "Mejora de la resiliencia del sistema y la integridad de los datos, reduciendo los errores de producción relacionados con la entrada en un 40% a través de pipes de validación globales y limitación de tasa (Throttler).",
+      "FOOTER": "Reducción del tamaño de la carga útil de respuesta en un 15% mediante la serialización precisa de datos con Interceptores y DTOs."
     },
     "POSTGRES": {
-      "DESC": "Aumento del rendimiento de consultas mediante indexación estratégica.",
-      "FOOTER": "Cero pérdida de datos en migración."
+      "DESC": "Reducción de la latencia de las consultas al eliminar escaneos secuenciales redundantes mediante indexación estratégica.",
+      "FOOTER": "Disminución de la sobrecarga de E/S, lo que conduce a tiempos de respuesta de la aplicación más estables y predecibles."
     },
     "DOCKER": {
       "DESC": "Paridad de entorno en todas las fases: Dev/Staging/Prod.",
-      "FOOTER": "Ejecuciones de CI/CD más rápidas."
+      "FOOTER": "Ejecuciones de pipelines CI/CD más rápidas."
     }
   },
   "EXPERIENCE": {
     "TITLE": "Experiencia Profesional",
     "FREELANCE": {
       "DATE": "Oct 2025 - Presente",
-      "ROLE": "Consultor y Desarrollador Fullstack",
-      "COMPANY": "Freelance / Independiente",
-      "DESC": "Colaborando con diversos clientes para arquitectar y entregar soluciones web escalables. Enfocado en ecosistemas fullstack usando NestJS y Angular con despliegues en Docker."
+      "ROLE": "Ingeniero de Software",
+      "COMPANY": "Independiente",
+      "DESC": "Creando productos web de extremo a extremo desde cero con un enfoque en la escalabilidad y el rendimiento. Construyendo herramientas digitales que resuelven problemas reales con una sencillez elegante."
     },
     "SENIOR": {
       "DATE": "Sep 2022 - Oct 2025",
-      "ROLE": "Desarrollador Frontend Senior",
+      "ROLE": "Desarrollador Frontend (Angular)",
       "COMPANY": "IMCS Group · Remoto EE.UU.",
-      "DESC": "Lideré el diseño arquitectónico y desarrollo de aplicaciones empresariales de misión crítica. Promoví el diseño orientado a componentes y la adherencia estricta a principios de Clean Code."
+      "DESC": "Lideré el desarrollo de múltiples aplicaciones web empresariales desde cero utilizando Angular. Diseñé arquitecturas escalables y modulares e interfaces de alto rendimiento siguiendo las mejores prácticas orientadas a componentes."
     },
     "ENGINEER": {
       "DATE": "Oct 2021 - Sep 2022",
-      "ROLE": "Ingeniero de Software Full Stack",
+      "ROLE": "Ingeniero de Software",
       "COMPANY": "Unikasoft · México",
-      "DESC": "Desarrollé una plataforma de comunicación interna combinando liderazgo en frontend con responsabilidad en backend. Diseñé flujos de datos en tiempo real y APIs resilientes."
+      "DESC": "Desarrollé una plataforma de comunicación en tiempo real utilizando Node.js, Express y Socket.IO. Diseñé APIs RESTful, implementé autenticación JWT y gestioné datos relacionales con MySQL."
     }
   },
   "PROJECTS": {
     "BADGE": "Proyecto Destacado",
     "drove_trace": "Drove Trace",
     "OBSERVABILITY": "Stack de Observabilidad Empresarial",
-    "DESC": "Drove Trace es un sistema de monitoreo de errores distribuido diseñado para manejar una ingesta masiva de eventos sin comprometer la velocidad de análisis. Construido con Clean Architecture para asegurar multi-tenencia estricta y aislamiento de datos.",
+    "DESC": "Drove Trace es un sistema de monitoreo de errores distribuido diseñado para manejar una ingesta masiva de eventos sin comprometer la velocidad de análisis. Construido con un enfoque de Clean Architecture para asegurar una multi-tenencia estricta y aislamiento de datos.",
     "CONTROL_PLANE": {
       "TITLE": "Plano de Control",
       "DESC": "Servicios NestJS que gestionan claves SDK seguras y ciclos de vida de proyectos con latencia casi nula."
     },
     "DATA_PLANE": {
       "TITLE": "Plano de Datos",
-      "DESC": "Motor de ingesta de eventos de alto rendimiento con huellas inteligentes para reducción de ruido."
+      "DESC": "Motor de ingesta de eventos de alto rendimiento con huellas inteligentes para la reducción de ruido."
     },
     "CTA_EXPLAIN": "Explicar Arquitectura",
-    "LIVE": "INSTANCIA EN VIVO DISPONIBLE",
+    "LIVE": "PREVISUALIZACIÓN LOCAL LISTA PARA DOCKER",
     "FRONTEND_ENG": "Ingeniería Frontend",
     "REACTIVE_DASH": "Dashboards Reactivos con Angular 21 Signals",
     "REACTIVITY_TITLE": "Reactividad de grano fino:",
@@ -113,7 +113,8 @@
     "DEVEX_DESC": "Paridad constante local-nube asegurando una colaboración fluida del equipo.",
     "TRACE_TITLE": "Terminal Trace: Análisis de Lógica de Negocio",
     "AI_EXPLAIN_LOADING": "Analizando impacto de negocio de la arquitectura de Drove Trace...",
-    "AI_EXPLAIN_CONTENT": "Drove Trace proporciona observabilidad crítica destilando flujos masivos de errores en información procesable mediante huellas inteligentes, asegurando la estabilidad del sistema y reduciendo el MTTR en un 50%."
+    "AI_EXPLAIN_CONTENT": "Drove Trace proporciona observabilidad crítica destilando flujos masivos de errores en información procesable mediante huellas inteligentes, asegurando la estabilidad del sistema y reduciendo el MTTR en un 50%",
+    "VIEW_GITHUB": "Ver en GitHub"
   },
   "TECH_STACK": {
     "LABEL": "Arsenal Técnico",
