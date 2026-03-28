@@ -176,7 +176,7 @@ Brand name, logo, and content are property of DROVE.dev.
 
 <div align="center">
   <br/>
-  <img src="public/assets/images/logo/Drove Vertical.svg" width="100" alt="Drove Logo" />
+  <img src="public/assets/images/logo/drove_logo.svg" width="100" alt="Drove Logo" />
   <br/><br/>
   <sub><strong>DROVE.dev</strong> — Architecting resilient software ecosystems with precision and passion.</sub>
   <br/><br/>
