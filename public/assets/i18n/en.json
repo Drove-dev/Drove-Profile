@@ -17,8 +17,8 @@
   },
   "FOOTER": {
     "TAGLINE": "Architecting resilient software ecosystems with precision and passion.",
-    "MADE_WITH": "Crafted with ❤️ by DROVE",
-    "COPYRIGHT": "© 2026 DROVE. All rights reserved.",
+    "MADE_WITH": "Crafted with ❤️ by DROVE.dev",
+    "COPYRIGHT": "© 2026 DROVE.dev. All rights reserved.",
     "LINKS": {
       "TITLE": "Quick Links",
       "ABOUT": "About",
@@ -33,7 +33,7 @@
     }
   },
   "HERO": {
-    "BADGE": "FULLSTACK // NESTJS + ANGULAR + DOCKER",
+    "BADGE": "FULLSTACK // OPEN TO NEW OPPORTUNITIES.",
     "TITLE": {
       "ENGINEERING": "Engineering",
       "RESILIENT": "resilient",
@@ -41,10 +41,10 @@
     },
     "SUBTITLE": {
       "NAME": "I'm Eimar Romero",
-      "ROLE_DESC": "the Senior Engineer behind",
-      "DROVE": "DROVE",
-      "FOCUS": "Focused on building scalable ecosystems with",
-      "NEST_ANGULAR": "Angular and NestJS,",
+      "ROLE_DESC": "the Engineer behind",
+      "DROVE": "DROVE.dev",
+      "FOCUS": "Building things end-to-end,",
+      "NEST_ANGULAR": "from pixel to server,",
       "CONTAINERIZED": "containerized for high-availability environments."
     },
     "CTA": "Explore Impact"
@@ -53,16 +53,16 @@
     "TITLE": "Impact & Metrics",
     "SUBTITLE": "Quantifiable results by technology stack.",
     "ANGULAR": {
-      "DESC": "Load time optimization via Lazy Loading & Signals.",
-      "FOOTER": "Enterprise components."
+      "DESC": "Optimized Core Web Vitals, achieving a 35% faster Largest Contentful Paint (LCP) through route-level lazy loading.",
+      "FOOTER": "Reduced browser CPU overhead by 20% by migrating complex state to Angular Signals for fine-grained reactivity."
     },
     "NESTJS": {
-      "DESC": "API response time reduction through modular DTOs.",
-      "FOOTER": "Handled concurrent reqs."
+      "DESC": "Improved system resilience and data integrity, reducing input-related production errors by 40% through global validation pipes and rate-limiting (Throttler).",
+      "FOOTER": "Reduced response payload size by 15% through precision data serialization with Interceptors and DTOs."
     },
     "POSTGRES": {
-      "DESC": "Query performance boost via strategic indexing.",
-      "FOOTER": "Zero data loss in migration."
+      "DESC": "Reduced query latency by eliminating redundant sequential scans through strategic indexing.",
+      "FOOTER": "Decreased I/O overhead, leading to more stable and predictable application response times."
     },
     "DOCKER": {
       "DESC": "Environment parity across Dev/Staging/Prod stages.",
@@ -73,28 +73,28 @@
     "TITLE": "Professional Experience",
     "FREELANCE": {
       "DATE": "Oct 2025 - Present",
-      "ROLE": "Fullstack Developer & Consultant",
-      "COMPANY": "Freelance / Independent",
-      "DESC": "Collaborating with diverse clients to architect and deliver scalable web solutions. Focusing on fullstack ecosystems using NestJS and Angular with Dockerized deployments."
+      "ROLE": "Software Engineer",
+      "COMPANY": "Independent",
+      "DESC": "Crafting end-to-end web products from scratch with a focus on scalability and performance. Building digital tools that solve real problems with elegant simplicity."
     },
-    "SENIOR": {
+  "SENIOR": {
       "DATE": "Sep 2022 - Oct 2025",
-      "ROLE": "Senior Frontend Developer",
+      "ROLE": "Frontend Developer (Angular)",
       "COMPANY": "IMCS Group · U.S. Remote",
-      "DESC": "Led the architectural design and development of mission-critical enterprise applications. Championed component-driven design and strict adherence to Clean Code principles."
+      "DESC": "Led the development of multiple enterprise web applications from scratch using Angular. Designed scalable, modular architectures and high-performance interfaces following component-driven best practices."
     },
     "ENGINEER": {
       "DATE": "Oct 2021 - Sep 2022",
-      "ROLE": "Full Stack Software Engineer",
+      "ROLE": "Software Engineer",
       "COMPANY": "Unikasoft · Mexico",
-      "DESC": "Delivered an internal communication platform combining frontend leadership with robust backend ownership. Engineered real-time data flows and resilient APIs."
+      "DESC": "Developed a real-time communication platform using Node.js, Express, and Socket.IO. Engineered RESTful APIs, implemented JWT authentication, and managed relational data with MySQL."
     }
   },
   "PROJECTS": {
     "BADGE": "Feature Project",
-    "ERRLY": "Errly",
+    "drove_trace": "Drove Trace",
     "OBSERVABILITY": "Enterprise Observability Stack",
-    "DESC": "Errly is a distributed error monitoring system designed to handle massive event ingestion without compromising analysis speed. Built with a Clean Architecture approach to ensure strict multi-tenancy and data isolation.",
+    "DESC": "Drove Trace is a distributed error monitoring system designed to handle massive event ingestion without compromising analysis speed. Built with a Clean Architecture approach to ensure strict multi-tenancy and data isolation.",
     "CONTROL_PLANE": {
       "TITLE": "Control Plane",
       "DESC": "NestJS services managing secure SdkKeys and project lifecycles with near-zero latency."
@@ -104,7 +104,7 @@
       "DESC": "High-throughput event ingestion engine with intelligent fingerprinting for noise reduction."
     },
     "CTA_EXPLAIN": "Explain Architecture",
-    "LIVE": "LIVE INSTANCE AVAILABLE",
+    "LIVE": "DOCKER-READY LOCAL PREVIEW",
     "FRONTEND_ENG": "Frontend Engineering",
     "REACTIVE_DASH": "Reactive Dashboards with Angular 21 Signals",
     "REACTIVITY_TITLE": "Fine-grained reactivity:",
@@ -112,8 +112,9 @@
     "DEVEX_TITLE": "Dockerized Devex:",
     "DEVEX_DESC": "Consistent local-to-cloud parity ensuring seamless team collaboration.",
     "TRACE_TITLE": "Terminal Trace: Business Logic Analysis",
-    "AI_EXPLAIN_LOADING": "Analyzing business impact of Errly architecture...",
-    "AI_EXPLAIN_CONTENT": "Errly provides critical observability by distilling massive error streams into actionable insights using intelligent fingerprinting, ensuring system stability and reducing MTTR by 50%."
+    "AI_EXPLAIN_LOADING": "Analyzing business impact of Drove Trace architecture...",
+    "AI_EXPLAIN_CONTENT": "Drove Trace provides critical observability by distilling massive error streams into actionable insights using intelligent fingerprinting, ensuring system stability and reducing MTTR by 50%",
+    "VIEW_GITHUB": "View on GitHub"
   },
   "TECH_STACK": {
     "LABEL": "Technical Arsenal",

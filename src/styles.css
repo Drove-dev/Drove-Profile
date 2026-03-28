@@ -46,6 +46,10 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     background-color: var(--color-background);
     color: var(--color-textMain);
@@ -54,6 +58,10 @@
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
     margin: 0;
+  }
+
+  section {
+    scroll-margin-top: 6rem;
   }
 
   app-header, app-hero, app-metrics, app-experience, app-projects, app-tech-stack, app-contact {
@@ -90,16 +98,18 @@
 
   .tech-card {
     background-image: var(--background-image-card-gradient);
-    background-color: var(--color-surface);
-    border: 1px solid var(--color-borderSubtle);
-    backdrop-filter: blur(8px);
-    transition: all 0.3s ease;
+    background-color: rgba(10, 10, 10, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
   }
 
   .tech-card:hover {
-    border-color: var(--color-primary);
-    background-color: var(--color-surfaceHover);
-    transform: translateY(-2px);
+    border-color: rgba(56, 189, 248, 0.3);
+    background-color: rgba(20, 20, 20, 0.8);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px -10px rgba(56, 189, 248, 0.15);
   }
 
   .header-blur {
@@ -135,5 +145,11 @@
   .bg-radial-glow {
     background-image: var(--background-image-radial-glow);
   }
+
+  .stagger-1 { transition-delay: 100ms; }
+  .stagger-2 { transition-delay: 200ms; }
+  .stagger-3 { transition-delay: 300ms; }
+  .stagger-4 { transition-delay: 400ms; }
+  .stagger-5 { transition-delay: 500ms; }
 }
 

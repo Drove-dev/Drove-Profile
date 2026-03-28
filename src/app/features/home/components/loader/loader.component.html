@@ -1,0 +1,49 @@
+<div class="loader-overlay" [class.loader-exit]="isComplete()">
+  <div class="loader-content">
+
+    <!-- Logo con anillos -->
+    <div class="loader-logo-wrap">
+      <div class="loader-ring loader-ring--outer"></div>
+      <div class="loader-ring loader-ring--inner"></div>
+      <div class="loader-logo-bg">
+        <img src="assets/images/logo/logo_icon.svg"
+             alt="Logo"
+             class="loader-logo-img" />
+      </div>
+    </div>
+
+    <!-- Contador de porcentaje -->
+    <div class="loader-counter">
+      <span class="loader-percent">{{ progress() }}</span>
+      <span class="loader-percent-sign">%</span>
+    </div>
+
+    <!-- Texto de estado -->
+    <div class="loader-status">
+      <span class="loader-status-dot"></span>
+      <span class="loader-status-text">{{ displayText() }}</span>
+    </div>
+
+    <!-- Barra de progreso -->
+    <div class="loader-bar-track">
+      <div class="loader-bar-fill"
+           [style.width.%]="progress()">
+      </div>
+      <!-- Brillo deslizante -->
+      <div class="loader-bar-shimmer"
+           [style.left.%]="progress() - 4"
+           [style.opacity]="progress() > 2 && progress() < 99 ? 1 : 0">
+      </div>
+    </div>
+
+    <!-- Marcadores de la barra -->
+    <div class="loader-bar-markers">
+      <span>0</span>
+      <span>25</span>
+      <span>50</span>
+      <span>75</span>
+      <span>100</span>
+    </div>
+
+  </div>
+</div>
