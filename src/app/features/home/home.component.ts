@@ -19,6 +19,7 @@ import { TranslocoModule, TranslocoService } from '@jsverse/transloco';
 import { WavesComponent } from '../../shared/components/visuals/waves/waves.component';
 import { TechStackComponent } from './components/tech-stack/tech-stack.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { LoaderComponent } from './components/loader/loader.component';
 
 @Component({
   selector: 'app-home',
@@ -32,6 +33,7 @@ import { ContactComponent } from './components/contact/contact.component';
     TranslocoModule,
     WavesComponent,
     TechStackComponent,
+    LoaderComponent,
     // ContactComponent,
   ],
   templateUrl: './home.component.html',
@@ -45,6 +47,13 @@ export class HomeComponent implements OnInit, AfterViewInit {
   private destroyRef = inject(DestroyRef);
 
   isScrolled = signal(false);
+  showLoader = signal(true);
+
+  onLoaderComplete() {
+    // The loader CSS handles its own 500ms exit fade locally when complete is emitted.
+    // We merely unmount it from the DOM after the animation completes.
+    setTimeout(() => this.showLoader.set(false), 500);
+  }
 
   toggleLanguage() {
     const currentLang = this.translocoService.getActiveLang();
