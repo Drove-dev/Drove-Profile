@@ -22,7 +22,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
       @for (cat of categories(); track cat.key; let i = $index) {
         <div class="relative rounded-2xl overflow-hidden border border-white/[0.08]
-                    bg-surface/80 backdrop-blur-sm reveal"
+                    bg-surface/80 backdrop-blur-sm"
              [style.transition-delay]="i * 100 + 'ms'">
 
           <!-- Línea de color superior -->

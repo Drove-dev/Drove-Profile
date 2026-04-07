@@ -48,17 +48,34 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   isScrolled = signal(false);
   showLoader = signal(true);
+  mobileMenuOpen = signal(false);
 
+  /**
+   * Called when loader animation completes (~500ms)
+   * Removes loader from DOM after CSS animation finishes
+   */
   onLoaderComplete() {
-    // The loader CSS handles its own 500ms exit fade locally when complete is emitted.
-    // We merely unmount it from the DOM after the animation completes.
-    setTimeout(() => this.showLoader.set(false), 500);
+    // Use requestAnimationFrame to sync with animation end
+    requestAnimationFrame(() => {
+      setTimeout(() => {
+        this.showLoader.set(false);
+        // Optionally preload 3D scene here if not using @defer
+      }, 480); // Slightly less than 500ms for smooth transition
+    });
   }
 
   toggleLanguage() {
     const currentLang = this.translocoService.getActiveLang();
     const nextLang = currentLang === 'en' ? 'es' : 'en';
     this.translocoService.setActiveLang(nextLang);
+  }
+
+  toggleMobileMenu() {
+    this.mobileMenuOpen.set(!this.mobileMenuOpen());
+  }
+
+  closeMobileMenu() {
+    this.mobileMenuOpen.set(false);
   }
 
   get currentLang() {
@@ -68,37 +85,100 @@ export class HomeComponent implements OnInit, AfterViewInit {
   constructor() {}
 
   ngOnInit() {
+    /**
+     * Setup scroll listener outside Angular zone to prevent change detection
+     * Uses passive event listener for better scroll performance
+     */
     this.ngZone.runOutsideAngular(() => {
+      let lastScrollY = window.scrollY;
+      let timeoutId: number | null = null;
+
       const onScroll = () => {
-        const scrolled = window.scrollY > 20;
-        if (this.isScrolled() !== scrolled) {
-          this.ngZone.run(() => this.isScrolled.set(scrolled));
+        const currentScrollY = window.scrollY;
+        const isScrolled = currentScrollY > 20;
+
+        // Only trigger change detection if scroll threshold changes
+        if (Math.abs(currentScrollY - lastScrollY) > 20) {
+          // Debounce to avoid excessive change detection
+          if (timeoutId !== null) {
+            clearTimeout(timeoutId);
+          }
+
+          timeoutId = window.setTimeout(() => {
+            if (this.isScrolled() !== isScrolled) {
+              this.ngZone.run(() => this.isScrolled.set(isScrolled));
+            }
+            lastScrollY = currentScrollY;
+            timeoutId = null;
+          }, 50); // 50ms debounce
         }
       };
+
       window.addEventListener('scroll', onScroll, { passive: true });
-      this.destroyRef.onDestroy(() => window.removeEventListener('scroll', onScroll));
+      
+      this.destroyRef.onDestroy(() => {
+        window.removeEventListener('scroll', onScroll);
+        if (timeoutId !== null) {
+          clearTimeout(timeoutId);
+        }
+      });
     });
   }
 
   ngAfterViewInit() {
-    this.initRevealObserver();
+    // Defer reveal observer to next tick to avoid blocking render
+    requestAnimationFrame(() => {
+      this.initRevealObserver();
+    });
   }
 
-  initRevealObserver() {
-    setTimeout(() => {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('active');
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.1, rootMargin: '0px 0px -50px 0px' },
-      );
+  /**
+   * Initialize Intersection Observer for reveal animations
+   * Uses requestIdleCallback for non-critical operation
+   */
+  private initRevealObserver() {
+    const revealElements = Array.from(document.querySelectorAll('.reveal')) as HTMLElement[];
+    if (revealElements.length === 0) {
+      return;
+    }
 
-      document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
-    }, 150);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const activate = () => entry.target.classList.add('active');
+
+            if (window.requestIdleCallback) {
+              window.requestIdleCallback(activate);
+            } else {
+              activate();
+            }
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' },
+    );
+
+    // Observe all reveal elements
+    revealElements.forEach((el) => {
+      observer.observe(el);
+    });
+
+    // Fallback: immediately activate any reveal already visible on screen
+    requestAnimationFrame(() => {
+      revealElements.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          el.classList.add('active');
+          observer.unobserve(el);
+        }
+      });
+    });
+
+    // Cleanup observer on destroy
+    this.destroyRef.onDestroy(() => {
+      observer.disconnect();
+    });
   }
 }
