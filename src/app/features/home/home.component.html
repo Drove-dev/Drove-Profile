@@ -6,6 +6,8 @@
   <!-- Fixed subtle glows and grid -->
   <div class="fixed inset-0 bg-radial-glow z-0 pointer-events-none"></div>
   <div class="fixed inset-0 bg-grid z-0 pointer-events-none opacity-50"></div>
+  
+  <!-- Three.js Waves Background -->
   <app-waves></app-waves>
 
   <header
@@ -16,7 +18,7 @@
   <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
     <!-- Logo -->
     <div class="flex items-center gap-2 group cursor-pointer">
-      <img src="assets/images/logo/drove_logo.png" alt="Drove Logo" class="w-35 object-contain group-hover:scale-110 transition-transform">
+      <img src="assets/images/logo/drove_logo.png" alt="Drove Logo" width="120" height="40" class="h-10 w-auto object-contain group-hover:scale-110 transition-transform">
       <!-- <span class="text-xl font-bold tracking-widest text-textMain">DROVE</span> -->
     </div>
 
@@ -64,44 +66,98 @@
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
         </a>
       </div>
+
+      <!-- Mobile Menu Button -->
+      <button
+        (click)="toggleMobileMenu()"
+        class="md:hidden text-textMuted hover:text-textMain transition-colors p-2"
+        [attr.aria-label]="mobileMenuOpen() ? 'Cerrar menú' : 'Abrir menú'"
+      >
+        @if (!mobileMenuOpen()) {
+          <!-- Hamburger icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="4" x2="20" y1="6" y2="6"></line>
+            <line x1="4" x2="20" y1="12" y2="12"></line>
+            <line x1="4" x2="20" y1="18" y2="18"></line>
+          </svg>
+        } @else {
+          <!-- X icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 6l-12 12M6 6l12 12"></path>
+          </svg>
+        }
+      </button>
     </div>
   </div>
 </header>
+
+  <!-- Mobile Menu Dropdown -->
+  @if (mobileMenuOpen()) {
+    <nav class="md:hidden fixed top-20 left-0 right-0 bg-background/95 backdrop-blur-md border-b border-white/[0.06] z-40 animate-in fade-in duration-300" *transloco="let t">
+      <div class="max-w-7xl mx-auto px-6 py-6 flex flex-col gap-2">
+        <a href="#about" 
+           (click)="closeMobileMenu()"
+           class="text-sm font-medium text-textMuted hover:text-textMain hover:bg-white/5 transition-colors px-4 py-3 rounded">
+          {{ t('HEADER.NAV.ABOUT') }}
+        </a>
+        <a href="#projects" 
+           (click)="closeMobileMenu()"
+           class="text-sm font-medium text-textMuted hover:text-textMain hover:bg-white/5 transition-colors px-4 py-3 rounded">
+          {{ t('HEADER.NAV.ARCHITECTURE') }}
+        </a>
+        <a href="#experience" 
+           (click)="closeMobileMenu()"
+           class="text-sm font-medium text-textMuted hover:text-textMain hover:bg-white/5 transition-colors px-4 py-3 rounded">
+          {{ t('HEADER.NAV.EXPERIENCE') }}
+        </a>
+        <a href="#metrics" 
+           (click)="closeMobileMenu()"
+           class="text-sm font-medium text-textMuted hover:text-textMain hover:bg-white/5 transition-colors px-4 py-3 rounded">
+          {{ t('HEADER.NAV.IMPACT') }}
+        </a>
+        <a href="#tech-stack" 
+           (click)="closeMobileMenu()"
+           class="text-sm font-medium text-textMuted hover:text-textMain hover:bg-white/5 transition-colors px-4 py-3 rounded">
+          {{ t('HEADER.NAV.TECH_STACK') }}
+        </a>
+      </div>
+    </nav>
+  }
 
   <!-- Main Content -->
   <main class="w-full pt-40 pb-32 flex flex-col gap-32 relative z-10 overflow-hidden">
     <!-- HERO — transparente (par) -->
     <div class="w-full">
       <div class="max-w-5xl mx-auto px-6">
-        <app-hero class="reveal block"></app-hero>
+        <app-hero class="active block"></app-hero>
       </div>
     </div>
 
     <!-- PROJECTS — con fondo (impar) -->
     <div class="w-full py-20 bg-surface/90 border-y border-white/[0.06] backdrop-blur-sm">
       <div class="max-w-5xl mx-auto px-6">
-        <app-projects class="reveal block"></app-projects>
+        <app-projects class="active block"></app-projects>
       </div>
     </div>
 
     <!-- EXPERIENCE — transparente (par) -->
     <div class="w-full">
       <div class="max-w-5xl mx-auto px-6">
-        <app-experience class="reveal block"></app-experience>
+        <app-experience class="active block"></app-experience>
       </div>
     </div>
 
     <!-- METRICS — con fondo (impar) -->
     <div class="w-full py-20 bg-surface/90 border-y border-white/[0.06] backdrop-blur-sm">
       <div class="max-w-5xl mx-auto px-6">
-        <app-metrics class="reveal block"></app-metrics>
+        <app-metrics class="active block"></app-metrics>
       </div>
     </div>
 
     <!-- TECH STACK — transparente (par) -->
     <div class="w-full">
       <div class="max-w-5xl mx-auto px-6">
-        <app-tech-stack class="reveal block"></app-tech-stack>
+        <app-tech-stack class="active block"></app-tech-stack>
       </div>
     </div>
 
@@ -114,7 +170,7 @@
         <!-- Brand & Tagline -->
         <div class="md:col-span-5 space-y-6">
           <div class="flex items-center gap-2 group cursor-pointer w-fit">
-            <img src="assets/images/logo/drove_logo.png" alt="Drove Logo" class="w-30 object-contain group-hover:rotate-12 transition-transform duration-300">
+            <img src="assets/images/logo/drove_logo.png" alt="Drove Logo" width="96" height="32" class="h-8 w-auto object-contain group-hover:rotate-12 transition-transform duration-300">
             <!-- <span class="text-lg font-bold tracking-widest text-textMain">DROVE</span> -->
           </div>
           <p class="text-textMuted text-sm leading-relaxed max-w-xs font-light">
